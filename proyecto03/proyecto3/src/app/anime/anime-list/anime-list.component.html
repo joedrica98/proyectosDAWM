@@ -1,0 +1,30 @@
+<body>
+  <main class="pt-5">
+    <div class="album py-5 bg-light">
+      <div class="container">
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+          <div class="col" *ngFor="let anime of animes">
+            <div
+              class="card shadow-sm"
+              style="cursor: pointer"
+              (click)="navigateToDetail(anime.mal_id)"
+            >
+              <img
+                src="{{ this.anime.images.jpg.large_image_url }}"
+                alt=""
+                width="100%"
+                height="225"
+              />
+              <div class="card-body">
+                <p class="card-text">
+                  {{ anime.title }} <br />
+                  Duration: {{ anime.duration }}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>

@@ -1,0 +1,93 @@
+<div class="container mt-5 pt-5">
+  <div class="card">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-lg-5 col-md-5 col-sm-6">
+          <div class="white-box text-center">
+            <img
+              src="{{ this.anime.images.jpg.image_url }}"
+              class="img-responsive"
+            />
+          </div>
+        </div>
+        <div class="col-lg-7 col-md-7 col-sm-6">
+          <h4 class="box-title mt-5">{{anime.title}}</h4>
+          <div class="mt-5">
+            <div class="sm-no-margin">
+              <div class="progress-text">
+                <div class="row">
+                  <div class="col-7">Completed</div>
+                  <div class="col-5 text-right">{{ animeStats.completed }}</div>
+                </div>
+              </div>
+              <div class="custom-progress progress">
+                <div
+                  role="progressbar"
+                  aria-valuenow="70"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                  style="width: {{ completed }}"
+                  class="animated custom-bar progress-bar slideInLeft bg-sky"
+                ></div>
+              </div>
+              <div class="progress-text">
+                <div class="row">
+                  <div class="col-7">Dropped</div>
+                  <div class="col-5 text-right">
+                    {{ this.animeStats.dropped }}
+                  </div>
+                </div>
+              </div>
+              <div class="custom-progress progress">
+                <div
+                  role="progressbar"
+                  aria-valuenow="70"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                  style="width: {{ dropped }}"
+                  class="animated custom-bar progress-bar slideInLeft bg-orange"
+                ></div>
+              </div>
+              <div class="progress-text">
+                <div class="row">
+                  <div class="col-7">On Hold</div>
+                  <div class="col-5 text-right">
+                    {{ this.animeStats.dropped }}
+                  </div>
+                </div>
+              </div>
+              <div class="custom-progress progress">
+                <div
+                  role="progressbar"
+                  aria-valuenow="70"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                  style="width: {{ dropped }}"
+                  class="animated custom-bar progress-bar slideInLeft bg-green"
+                ></div>
+              </div>
+              <div class="progress-text">
+                <div class="row">
+                  <div class="col-7">Plan to Watch</div>
+                  <div class="col-5 text-right">
+                    {{ this.animeStats.plan_to_watch }}
+                  </div>
+                </div>
+              </div>
+              <div class="custom-progress progress">
+                <div
+                  role="progressbar"
+                  aria-valuenow="70"
+                  aria-valuemin="0"
+                  aria-valuemax="100"
+                  style="width: {{plan_to_watch}}"
+                  class="animated custom-bar progress-bar slideInLeft bg-yellow"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
